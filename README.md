@@ -1,0 +1,3 @@
+# qualtricks
+
+Tricks for qualtrics
