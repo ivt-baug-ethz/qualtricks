@@ -4,13 +4,17 @@
 \alias{generate_codes}
 \title{Generate access codes}
 \usage{
-generate_codes(n, write = FALSE)
+generate_codes(n, length = 4, write = FALSE)
 }
 \arguments{
-\item{n}{}
+\item{n}{number of codes to be generated}
+
+\item{length}{length of codes and passwords}
+
+\item{write}{logical, write to yaml file}
 }
 \value{
-
+data.frame
 }
 \description{
 Generate access codes

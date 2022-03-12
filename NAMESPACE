@@ -2,7 +2,9 @@
 
 export("%>%")
 export(check_api_keys)
+export(create_contact)
 export(generate_codes)
 export(get_label)
+export(update_contact)
 import(qualtRics)
 importFrom(magrittr,"%>%")

@@ -37,7 +37,7 @@ all_mailinglists()
 fetch_mailinglist("ML_cROpOLdqoh22Tyu")
 debugonce(fetch_mailinglist) # leverages list contacts api
 ?qualtRics::generate_url
-?qualtRics::qualtrics_api_request # httr request
+?qualtRics:::qualtrics_api_request # httr request
 
 # https://api.qualtrics.com/api-reference/YXBpOjYwOTE3-contacts
 # create contact api -> post request
@@ -45,31 +45,33 @@ debugonce(fetch_mailinglist) # leverages list contacts api
 # update contact api -> in conjunction with generate_codes...
 qualtRics::generate_url()
 
-generate_url_extended <- function(query, ...)
-{
-  args <- list(...)
-  list2env(args, envir = environment())
-  base_url <- Sys.getenv("QUALTRICS_BASE_URL")
-  base_url <- ifelse(substring(base_url, nchar(base_url)) ==
-                       "/", substr(base_url, 1, nchar(base_url) - 1), base_url)
-  root_url <- glue::glue("https://{base_url}/API/v3")
-  endpoint_template <-
-    switch(query,
-           createdirectorycontact = "{rooturl}/mailinglists/{mailinglistID}/contacts")
-
-  glue::glue(endpoint_template, rooturl = root_url, ...)
-}
 
 
-create_contact <- function(mailinglistID, body)
-{
-  qualtRics::assert_base_url()
-  qualtRics::assert_api_key()
-  post_url <- generate_url_extended("createdirectorycontact", mailinglistID = mailinglistID)
-  qualtRics::qualtrics_api_request(verb = "POST", url = post_url, body = body)
-}
 
 
-body <- list(firstName = "Blobb", lastName = "Blubb", email = "blobb@blubb.ch", externalDataReference = "E", language = "de", unsubscribed = FALSE)
-create_contact("ML_cROpOLdqoh22Tyu", body = body)
-debugonce(create_contact)
+## How to add --data to the post request??
+
+
+
+library(httr)
+url <- "https://fra1.qualtrics.com/API/v3/mailinglists/ML_cROpOLdqoh22Tyu/contacts/"
+url <- "http://httpbin.org/get"
+r <- GET(url, add_headers(h))
+r
+headers(r)
+content(r)
+
+post_url <- "https://fra1.qualtrics.com/API/v3/mailinglists/ML_cROpOLdqoh22Tyu/contacts"
+test <- "{}"
+r <- POST(post_url, add_headers(h), body = body, encode = "json")
+r
+http_status(r)
+
+post_url <- "https://ca1.qualtrics.com/API/v3/directories/directoryId/mailinglists/mailingListId/contacts"
+headr <- add_headers("Content-Type" = "application/son", "X-API-TOKEN" = "")
+b <- list(firstName = "string", lastName = "string", email = "string", phone = "string",
+          extRef = "string", embeddedData = list(property1 = "string", property2 = "string"),
+          language = "string", unsubscribed = TRUE)
+r <- POST(post_url, headr, body = b)
+r
+

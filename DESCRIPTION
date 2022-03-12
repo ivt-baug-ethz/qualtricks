@@ -16,5 +16,7 @@ Imports:
     config,
     glue,
     Hmisc,
+    httr,
     magrittr,
-    qualtRics
+    qualtRics,
+    R6
