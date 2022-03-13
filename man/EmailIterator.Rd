@@ -78,7 +78,7 @@ Create a new EmailIterator object.
 \if{html}{\out{<div class="arguments">}}
 \describe{
 \item{\code{mailinglist}}{A data.frame containing at least an \code{email} column
-and other data to be provided in the template.}
+and other data to be provided in the template. Consider \code{qualtRics::fetch_mailinglist}.}
 
 \item{\code{user}}{Inherited from super \code{Email}}
 
