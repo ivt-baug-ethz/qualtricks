@@ -222,7 +222,9 @@ EmailIterator <-
       },
 
       #' @description
-      #' Render the email in the Viewer to check its appearence.
+      #' Render the email in the Viewer to check its appearence. Will write to
+      #' private$email which then can be sent to individual adress if you set an
+      #' individual mail_adress...
       #' @param ... args must correspond to `fn`.
       #' @example
       #' \dontrun{
