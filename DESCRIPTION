@@ -19,4 +19,5 @@ Imports:
     httr,
     magrittr,
     qualtRics,
-    R6
+    R6,
+    stringr
