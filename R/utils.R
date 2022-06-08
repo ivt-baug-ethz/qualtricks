@@ -8,7 +8,7 @@
 #' @export
 strip_html <- function(x)
 {
-  stringr::str_remove_all(string, "<[^>]+>")
+  stringr::str_remove_all(x, "<[^>]+>")
 }
 
 
@@ -24,7 +24,7 @@ strip_html <- function(x)
 #' @export
 name_parser <- function(x)
 {
-  names(x) %>%
+  x %>%
   tolower() %>%
   stringr::str_remove_all("\\(|\\)") %>%
   stringr::str_replace_all("[[:space:]]", "_")
