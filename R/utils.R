@@ -29,3 +29,17 @@ name_parser <- function(x)
   stringr::str_remove_all("\\(|\\)") %>%
   stringr::str_replace_all("[[:space:]]", "_")
 }
+
+
+
+
+#' Drop columns only containing NAs
+#'
+#' @param df data.frame
+#'
+#' @return
+#' @export
+drop_all_na <- function(df)
+{
+  df[colSums(is.na(df)) < nrow(df)]
+}
