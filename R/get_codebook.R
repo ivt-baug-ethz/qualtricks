@@ -80,17 +80,27 @@ get_codebook <- function(survey_id, spec = NULL, encoding = "utf-8", add_transla
                   factor_value = ifelse(is.na(value_answer), value_choice, value_answer))
 
 
+
+  ## own naming convention
+  codebook <-
+    codebook %>%
+    dplyr::rename(QuestionSpecifier = value_choice,
+                  Answer = factor_levels,
+                  AnswerTranslation = factor_levels_t,
+                  AnswerValue = factor_value) %>%
+    dplyr::select(-tidyselect::contains("key_choice"),
+                  -tidyselect::contains("key_answer"),
+                  -value_answer)
+
+
   if(add_translations)
   {
 
     translations <-
       codebook %>%
-      dplyr::select(QuestionID, DataExportTag,
-                    key_answer, t_key_answer, value_answer,
-                    key_choice, t_key_choice, value_choice) %>%
-      dplyr::mutate(key_answer = ifelse(is.na(key_answer), key_choice, key_answer),
-                    t_key_answer = ifelse(is.na(t_key_answer), t_key_choice, t_key_answer)) %>%
-      dplyr::select(QuestionID, DataExportTag, from = key_answer, to = t_key_answer) %>%
+      dplyr::select(QuestionID, DataExportTag, QuestionSpecifier,
+                    from = Answer, AnswerTranslation, AnswerValue) %>%
+      tidyr::pivot_longer(cols = c(AnswerTranslation, AnswerValue), names_to = "type", values_to = "to") %>%
       tidyr::drop_na()
 
     attr(codebook, "translations") <- translations
