@@ -10,9 +10,6 @@ generate_codebook(survey_id, languages = c("DE", "EN"))
 \item{languages}{char vector of all language codes used in your survey, defaults to \code{c("DE", "EN")}
 (also passed to \code{download_translations})}
 }
-\value{
-
-}
 \description{
 Calls download_translations internally
 }

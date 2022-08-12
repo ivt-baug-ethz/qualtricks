@@ -101,7 +101,8 @@ get_codebook <- function(survey_id, spec = NULL, encoding = "utf-8", add_transla
       dplyr::select(QuestionID, DataExportTag, QuestionSpecifier,
                     from = Answer, AnswerTranslation, AnswerValue) %>%
       tidyr::pivot_longer(cols = c(AnswerTranslation, AnswerValue), names_to = "type", values_to = "to") %>%
-      tidyr::drop_na()
+      tidyr::drop_na() %>%
+      dplyr::relocate(type, .before = "from")
 
     attr(codebook, "translations") <- translations
   }

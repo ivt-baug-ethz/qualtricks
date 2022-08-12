@@ -11,9 +11,6 @@ get_label(df, ...)
 
 \item{...}{passed to \code{Hmisc::label()}}
 }
-\value{
-
-}
 \description{
 Usually the df is retrieved via \code{qualtRics::fetch_survey()}
 }

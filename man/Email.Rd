@@ -81,16 +81,16 @@ Reference: \code{blastula} package}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Email$new()}}
-\item \href{#method-write_mail}{\code{Email$write_mail()}}
-\item \href{#method-send_mail}{\code{Email$send_mail()}}
-\item \href{#method-print}{\code{Email$print()}}
-\item \href{#method-clone}{\code{Email$clone()}}
+\item \href{#method-Email-new}{\code{Email$new()}}
+\item \href{#method-Email-write_mail}{\code{Email$write_mail()}}
+\item \href{#method-Email-send_mail}{\code{Email$send_mail()}}
+\item \href{#method-Email-print}{\code{Email$print()}}
+\item \href{#method-Email-clone}{\code{Email$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Email-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Email-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new email object.
 \subsection{Usage}{
@@ -127,8 +127,8 @@ A new \code{Email} object.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-write_mail"></a>}}
-\if{latex}{\out{\hypertarget{method-write_mail}{}}}
+\if{html}{\out{<a id="method-Email-write_mail"></a>}}
+\if{latex}{\out{\hypertarget{method-Email-write_mail}{}}}
 \subsection{Method \code{write_mail()}}{
 Write an email. Wrapper around \code{blastula::compose_email}
 \subsection{Usage}{
@@ -144,8 +144,8 @@ Write an email. Wrapper around \code{blastula::compose_email}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-send_mail"></a>}}
-\if{latex}{\out{\hypertarget{method-send_mail}{}}}
+\if{html}{\out{<a id="method-Email-send_mail"></a>}}
+\if{latex}{\out{\hypertarget{method-Email-send_mail}{}}}
 \subsection{Method \code{send_mail()}}{
 Send the email. Wrapper around \code{blastula::smtp_send}
 \subsection{Usage}{
@@ -163,8 +163,8 @@ Send the email. Wrapper around \code{blastula::smtp_send}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
+\if{html}{\out{<a id="method-Email-print"></a>}}
+\if{latex}{\out{\hypertarget{method-Email-print}{}}}
 \subsection{Method \code{print()}}{
 Print method for Email. Renders the email in the Viewer.
 \subsection{Usage}{
@@ -173,8 +173,8 @@ Print method for Email. Renders the email in the Viewer.
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Email-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Email-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

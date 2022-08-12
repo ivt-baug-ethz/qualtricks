@@ -9,9 +9,6 @@ name_parser(x)
 \arguments{
 \item{x}{character vector}
 }
-\value{
-
-}
 \description{
 Usually applied to survey or col_map or something the like...
 }

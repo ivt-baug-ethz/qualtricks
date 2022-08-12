@@ -9,9 +9,6 @@ strip_html(x)
 \arguments{
 \item{x}{a string with html tags}
 }
-\value{
-
-}
 \description{
 Strips html tags
 }

@@ -9,9 +9,6 @@ drop_all_na(df)
 \arguments{
 \item{df}{data.frame}
 }
-\value{
-
-}
 \description{
 Drop columns only containing NAs
 }

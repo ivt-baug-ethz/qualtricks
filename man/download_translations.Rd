@@ -9,9 +9,6 @@ download_translations(survey_id, languages = c("DE", "EN"))
 \arguments{
 \item{languages}{char vector of all language codes used in your survey, defaults to \code{c("DE", "EN")}}
 }
-\value{
-
-}
 \description{
 Please install qualtricks from ivt-baug-ethz and set up your Qualtrics credentials.
 }

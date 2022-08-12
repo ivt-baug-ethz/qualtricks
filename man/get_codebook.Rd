@@ -22,9 +22,6 @@ Retrieve via \code{attributes(codebook, "translations")}}
 
 \item{...}{not implemented}
 }
-\value{
-
-}
 \description{
 Generate a codebook
 }

@@ -48,26 +48,26 @@ and other data to be provided in the template.}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{EmailIterator$new()}}
-\item \href{#method-validate}{\code{EmailIterator$validate()}}
-\item \href{#method-set_template}{\code{EmailIterator$set_template()}}
-\item \href{#method-check_template}{\code{EmailIterator$check_template()}}
-\item \href{#method-send_mails}{\code{EmailIterator$send_mails()}}
-\item \href{#method-clone}{\code{EmailIterator$clone()}}
+\item \href{#method-EmailIterator-new}{\code{EmailIterator$new()}}
+\item \href{#method-EmailIterator-validate}{\code{EmailIterator$validate()}}
+\item \href{#method-EmailIterator-set_template}{\code{EmailIterator$set_template()}}
+\item \href{#method-EmailIterator-check_template}{\code{EmailIterator$check_template()}}
+\item \href{#method-EmailIterator-send_mails}{\code{EmailIterator$send_mails()}}
+\item \href{#method-EmailIterator-clone}{\code{EmailIterator$clone()}}
 }
 }
-\if{html}{
-\out{<details open ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="print">}\href{../../qualtricks/html/Email.html#method-print}{\code{qualtricks::Email$print()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="send_mail">}\href{../../qualtricks/html/Email.html#method-send_mail}{\code{qualtricks::Email$send_mail()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="write_mail">}\href{../../qualtricks/html/Email.html#method-write_mail}{\code{qualtricks::Email$write_mail()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="print"><a href='../../qualtricks/html/Email.html#method-Email-print'><code>qualtricks::Email$print()</code></a></li>
+<li><span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="send_mail"><a href='../../qualtricks/html/Email.html#method-Email-send_mail'><code>qualtricks::Email$send_mail()</code></a></li>
+<li><span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="write_mail"><a href='../../qualtricks/html/Email.html#method-Email-write_mail'><code>qualtricks::Email$write_mail()</code></a></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-EmailIterator-new"></a>}}
+\if{latex}{\out{\hypertarget{method-EmailIterator-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new EmailIterator object.
 \subsection{Usage}{
@@ -99,8 +99,8 @@ A new \code{EmailIterator} object.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-validate"></a>}}
-\if{latex}{\out{\hypertarget{method-validate}{}}}
+\if{html}{\out{<a id="method-EmailIterator-validate"></a>}}
+\if{latex}{\out{\hypertarget{method-EmailIterator-validate}{}}}
 \subsection{Method \code{validate()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EmailIterator$validate()}\if{html}{\out{</div>}}
@@ -108,8 +108,8 @@ A new \code{EmailIterator} object.
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_template"></a>}}
-\if{latex}{\out{\hypertarget{method-set_template}{}}}
+\if{html}{\out{<a id="method-EmailIterator-set_template"></a>}}
+\if{latex}{\out{\hypertarget{method-EmailIterator-set_template}{}}}
 \subsection{Method \code{set_template()}}{
 Sets the template. A template is a function with placeholders as parameters
 to be filled from the mailinglist.
@@ -128,8 +128,8 @@ passed as args to \code{blastula::compose_email}.}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-check_template"></a>}}
-\if{latex}{\out{\hypertarget{method-check_template}{}}}
+\if{html}{\out{<a id="method-EmailIterator-check_template"></a>}}
+\if{latex}{\out{\hypertarget{method-EmailIterator-check_template}{}}}
 \subsection{Method \code{check_template()}}{
 Render the email in the Viewer to check its appearence. Will write to
 private$email which then can be sent to individual adress if you set an
@@ -147,8 +147,8 @@ individual mail_adress...
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-send_mails"></a>}}
-\if{latex}{\out{\hypertarget{method-send_mails}{}}}
+\if{html}{\out{<a id="method-EmailIterator-send_mails"></a>}}
+\if{latex}{\out{\hypertarget{method-EmailIterator-send_mails}{}}}
 \subsection{Method \code{send_mails()}}{
 Iterate over mailinglist and send mail to each recipient. Fills the
 placeholder values in the template with matching columns from the
@@ -166,8 +166,8 @@ mailinglist.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-EmailIterator-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-EmailIterator-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
