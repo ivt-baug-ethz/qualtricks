@@ -76,7 +76,7 @@ get_codebook <- function(survey_id, spec = NULL, encoding = "utf-8", add_transla
   codebook <-
     codebook %>%
     dplyr::mutate(factor_levels = ifelse(is.na(key_answer), key_choice, key_answer),
-                  factor_levels_t = ifelse(is.na(t_key_answer), t_key_choice, t_key_answer),
+                  t_factor_levels = ifelse(is.na(t_key_answer), t_key_choice, t_key_answer),
                   factor_value = ifelse(is.na(value_answer), value_choice, value_answer))
 
 
@@ -84,9 +84,11 @@ get_codebook <- function(survey_id, spec = NULL, encoding = "utf-8", add_transla
   ## own naming convention
   codebook <-
     codebook %>%
-    dplyr::rename(QuestionSpecifier = value_choice,
+    dplyr::rename(QuestionSpecifier = key_choice,
+                  QuestionSpecifierTranslation = t_key_choice,
+                  QuestionSpecifierValue = value_choice,
                   Answer = factor_levels,
-                  AnswerTranslation = factor_levels_t,
+                  AnswerTranslation = t_factor_levels,
                   AnswerValue = factor_value) %>%
     dplyr::select(-tidyselect::contains("key_choice"),
                   -tidyselect::contains("key_answer"),
