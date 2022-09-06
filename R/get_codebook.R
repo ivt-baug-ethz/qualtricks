@@ -38,6 +38,10 @@ get_codebook <- function(survey_id, spec = NULL, encoding = "utf-8", add_transla
 
   translations <- q_df[names(q_df) %in% c("QuestionID", "Language")] %>% tidyr::unnest(cols = "Language")
 
+  t_questions_df <-
+    translations %>%
+    dplyr::select(QuestionID, t_QuestionText = QuestionText)
+
   t_choices_df <-
     translations %>%
     dplyr::select(QuestionID, Choices) %>%
@@ -54,9 +58,10 @@ get_codebook <- function(survey_id, spec = NULL, encoding = "utf-8", add_transla
     desc_df %>%
     dplyr::full_join(choices_df, by = "QuestionID") %>%
     dplyr::full_join(answers_df, by = "QuestionID") %>%
+    dplyr::full_join(t_questions_df, by = "QuestionID") %>%
     dplyr::full_join(t_choices_df, by = c("QuestionID", "value_choice")) %>%
     dplyr::full_join(t_answers_df, by = c("QuestionID", "value_answer")) %>%
-    dplyr::select(QuestionID, DataExportTag, QuestionText, QuestionDescription,
+    dplyr::select(QuestionID, DataExportTag, QuestionText, t_QuestionText, QuestionDescription,
                   QuestionType, Selector, SubSelector, ChoiceOrder,
                   key_choice, t_key_choice, value_choice,
                   key_answer, t_key_answer, value_answer)
@@ -84,7 +89,8 @@ get_codebook <- function(survey_id, spec = NULL, encoding = "utf-8", add_transla
   ## own naming convention
   codebook <-
     codebook %>%
-    dplyr::rename(QuestionSpecifier = key_choice,
+    dplyr::rename(GuestionTextTranslation = t_QuestionText,
+                  QuestionSpecifier = key_choice,
                   QuestionSpecifierTranslation = t_key_choice,
                   QuestionSpecifierValue = value_choice,
                   Answer = factor_levels,
