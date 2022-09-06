@@ -89,7 +89,7 @@ get_codebook <- function(survey_id, spec = NULL, encoding = "utf-8", add_transla
   ## own naming convention
   codebook <-
     codebook %>%
-    dplyr::rename(GuestionTextTranslation = t_QuestionText,
+    dplyr::rename(QuestionTextTranslation = t_QuestionText,
                   QuestionSpecifier = key_choice,
                   QuestionSpecifierTranslation = t_key_choice,
                   QuestionSpecifierValue = value_choice,
