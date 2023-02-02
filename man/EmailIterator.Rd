@@ -59,9 +59,9 @@ and other data to be provided in the template.}
 \if{html}{\out{
 <details open><summary>Inherited methods</summary>
 <ul>
-<li><span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="print"><a href='../../qualtricks/html/Email.html#method-Email-print'><code>qualtricks::Email$print()</code></a></li>
-<li><span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="send_mail"><a href='../../qualtricks/html/Email.html#method-Email-send_mail'><code>qualtricks::Email$send_mail()</code></a></li>
-<li><span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="write_mail"><a href='../../qualtricks/html/Email.html#method-Email-write_mail'><code>qualtricks::Email$write_mail()</code></a></li>
+<li><span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="print"><a href='../../qualtricks/html/Email.html#method-Email-print'><code>qualtricks::Email$print()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="send_mail"><a href='../../qualtricks/html/Email.html#method-Email-send_mail'><code>qualtricks::Email$send_mail()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="qualtricks" data-topic="Email" data-id="write_mail"><a href='../../qualtricks/html/Email.html#method-Email-write_mail'><code>qualtricks::Email$write_mail()</code></a></span></li>
 </ul>
 </details>
 }}

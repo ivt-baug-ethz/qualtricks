@@ -92,7 +92,7 @@ generate_codebook <- function(survey_id, languages = c("DE", "EN"))
   base_url <- Sys.getenv("QUALTRICS_BASE_URL")
   key <- Sys.getenv("QUALTRICS_API_KEY")
 
-  translations <- preStudy::download_translations(survey_id, languages)
+  translations <- qualtricks::download_translations(survey_id, languages)
 
   quest_df <-
     qualtRics::survey_questions(survey_id) %>%

@@ -7,8 +7,7 @@
 set_translation_labels(
   survey,
   codebook,
-  .exclude = rlang::quos(QuestionType == "TE" | stringr::str_detect(DataExportTag,
-    "^Q"))
+  .exclude = rlang::quos(QuestionType == "TE" | stringr::str_detect(DataExportTag, "^Q"))
 )
 }
 \arguments{
